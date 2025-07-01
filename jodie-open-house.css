@@ -1,0 +1,84 @@
+:root {
+    /* Color Palette */
+    --clr-bg-black: #000;
+    --clr-bg-white: #fff;
+    --clr-primary: #333333;
+    --clr-secondary: #FF78B5;
+
+    /* Fonts */
+    --font-family-main: 'Merriweather', serif;
+
+    /* Sizing */
+    --wrapper-width: 1080px;
+    --wrapper-height: 1350px;
+    --main-title-size: 5rem;
+    --brand-size: 1.3rem;
+    --address-size: 1.3rem;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--clr-bg-black);
+}
+
+/* Wrapper Layout */
+.wrapper {
+    width: var(--wrapper-width);
+    height: var(--wrapper-height);
+    background: var(--clr-bg-white);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Top Section */
+.top-section {
+    background: var(--clr-bg-white);
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.brand {
+    font-family: var(--font-family-main);
+    font-size: var(--brand-size);
+    color: var(--clr-secondary);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.main-title {
+    font-family: var(--font-family-main);
+    font-size: var(--main-title-size);
+    color: var(--clr-secondary);
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.address {
+    font-family: var(--font-family-main);
+    font-size: var(--address-size);
+    font-weight: 300;
+    color: var(--clr-primary);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Bottom Section */
+.bottom-section {
+    width: 100%;
+    height: 67%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 1;
+    margin-top: 50px;
+}

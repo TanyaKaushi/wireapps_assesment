@@ -1,0 +1,141 @@
+:root {
+    /* Color Palette */
+    --color-bg-dark: #222;
+    --color-bg-black: #000;
+    --color-bg-white: #fff;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-gradient-dark: rgba(0, 0, 0, 0.8);
+    --color-gradient-mid: rgba(0, 0, 0, 0.4);
+    --color-gradient-light: rgba(0, 0, 0, 0);
+    --color-text-main: #fff;
+    --color-text-dark: #000;
+
+    /* Fonts */
+    --font-main: 'Open Sans', Arial, Helvetica, sans-serif;
+    --font-title: 'Libre Baskerville', serif;
+    --font-logo: 'Benton Sans', Arial, Helvetica, sans-serif;
+
+    /* Sizing */
+    --container-width: 1080px;
+    --container-height: 1920px;
+    --logo-width: 400px;
+    --logo-height: 300px;
+    --logo-small-width: 60px;
+}
+
+/* Base Styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-dark);
+}
+
+/* Story Container */
+.story-container {
+    position: relative;
+    width: var(--container-width);
+    height: var(--container-height);
+    margin: 0 auto;
+    background: var(--color-bg-black);
+    overflow: hidden;
+    box-shadow: 0 0 40px var(--color-shadow);
+}
+
+/* Background Image & Gradient */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--container-width);
+    height: var(--container-height);
+    object-fit: cover;
+    z-index: 0;
+    background-repeat: no-repeat;
+}
+
+.background-gradient {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: var(--container-width);
+    height: 60vh;
+    pointer-events: none;
+    background: linear-gradient(to top,
+            var(--color-gradient-dark) 0%,
+            var(--color-gradient-mid) 50%,
+            var(--color-gradient-light) 100%);
+    z-index: 1;
+}
+
+/* Centered Content */
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    padding: 0px 130px;
+    color: var(--color-text-main);
+}
+
+.leased {
+    font-family: var(--font-title);
+    font-size: 5rem !important;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.address {
+    font-family: var(--font-main);
+    font-size: 3rem !important;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* Bottom Logo & Branding */
+.bottom-logo {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.cohen-logo {
+    width: var(--logo-width);
+    height: var(--logo-height);
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.cohen-logo-small {
+    width: var(--logo-small-width);
+    margin-bottom: 10px;
+}
+
+.cohen-name {
+    font-family: var(--font-logo);
+    font-size: 2.2rem;
+    letter-spacing: 0.3em;
+    font-weight: 600;
+}
+
+.cohen-desc {
+    font-family: var(--font-logo);
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    margin-top: 0.2rem;
+}

@@ -1,0 +1,203 @@
+:root {
+    /* Color Palette */
+    --color-bg-dark: #222;
+    --color-bg-black: #000;
+    --color-bg-white: #fff;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-shadow-light: rgba(0, 0, 0, 0.10);
+    --color-text-main: #fff;
+    --color-text-dark: #000;
+
+    /* Fonts */
+    --font-main: 'Montserrat', Arial, Helvetica, sans-serif;
+    --font-title: 'Playfair Display', serif;
+    --font-script: 'Dancing Script', cursive, sans-serif;
+    --font-date: 'Corinthia', cursive, sans-serif;
+
+    /* Sizing */
+    --container-width: 700px;
+    --container-height: 700px;
+    --vertical-width: 150px;
+    --main-content-width: 610px;
+    --image-width: 500px;
+    --image-height: 420px;
+    --logo-width: 100px;
+}
+
+/* Base Styles */
+body {
+    background: var(--color-bg-dark);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+}
+
+/* Container Layout */
+.open-house-container {
+    width: var(--container-width);
+    height: var(--container-height);
+    background: var(--color-bg-black);
+    color: var(--color-text-main);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    box-shadow: 0 4px 24px var(--color-shadow);
+    -webkit-box-shadow: 0 4px 24px var(--color-shadow);
+    -moz-box-shadow: 0 4px 24px var(--color-shadow);
+    display: flex;
+    flex-direction: row;
+}
+
+/* Vertical Text Banner */
+.vertical-text {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--vertical-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: var(--font-title);
+    font-size: 5rem;
+    letter-spacing: 0.1em;
+    background: var(--color-bg-black);
+    color: var(--color-text-main);
+    font-weight: 500;
+    z-index: 2;
+    padding: 0px 30px 0px 30px;
+    transform: rotate(180deg);
+}
+
+/* Main Content Area */
+.main-content {
+    width: var(--main-content-width);
+    height: var(--container-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* Image Section */
+.image-wrapper {
+    position: relative;
+    width: var(--image-width);
+    height: var(--image-height);
+    margin-top: 60px;
+}
+
+.listing-photo {
+    width: var(--image-width);
+    height: var(--image-height);
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+/* Features Box */
+.features-box {
+    background: var(--color-bg-white);
+    color: var(--color-text-dark);
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    padding: 20px 10px;
+    position: absolute;
+    bottom: 0px;
+    right: -50px;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px var(--color-shadow-light);
+    -webkit-box-shadow: 0 2px 8px var(--color-shadow-light);
+    -moz-box-shadow: 0 2px 8px var(--color-shadow-light);
+    font-family: var(--font-main);
+    z-index: 3;
+    text-align: left;
+}
+
+.features-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-box li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.features-box li:last-child {
+    margin-bottom: 10px;
+}
+
+.features-box .icon {
+    margin-right: 12px;
+    font-size: 1.3em;
+}
+
+/* Address & Date */
+.listing-address {
+    font-family: var(--font-main);
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: left;
+    margin: 32px 0 8px 0;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.open-house-date {
+    font-family: var(--font-date);
+    font-size: 3rem;
+    text-align: left;
+    font-weight: 200;
+    margin-bottom: 18px;
+    letter-spacing: 0.04em;
+    color: var(--color-text-main);
+    font-style: italic;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    width: var(--logo-width);
+    height: auto;
+    display: block;
+}
+
+/* Utility Classes */
+.image-upload {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    font-family: var(--font-title);
+}
+
+.body-text {
+    font-family: var(--font-main);
+}
+
+.accent {
+    font-family: var(--font-script);
+}
+
+.details-box i {
+    font-size: 1.2em;
+    margin-right: 8px;
+    color: var(--color-text-dark);
+}
